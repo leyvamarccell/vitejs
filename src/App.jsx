@@ -29,7 +29,7 @@ auth.onAuthStateChanged((user) => {
   const Auth  = () => {
     const provider = new firebase.GoogleAuthProvider()
     console.log(provider)
-    firebase.signInWithPopup(auth, provider)
+    firebase.signInWithRedirect(auth, provider)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
