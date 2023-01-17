@@ -65,7 +65,7 @@ auth.onAuthStateChanged((user) => {
     <input onChange={getName} type="text" className='border border-black m-5 ' placeholder='name'/>
     <input onChange={getLastName} type="text" className='border border-black m-5 ' placeholder='lastName'/>
     <button onClick={sendData}>Submit</button>
-
+<button onClick={() => auth.signOut()}>Logout</button>
   <img src={currentUser} alt="" height={100} width={100}/>
   <button onClick={Auth} className='border border-gray-900 mx-auto px-2 py-2 hover:bg-green-400'>Login with google</button>
 </div>
